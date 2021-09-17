@@ -3,7 +3,7 @@
 # Starts the lxc if it is stopped and executes the container
 #
 # Inputs: lxc container name
-function lxc_start 
+function lxc_open
 {
   lxc_status=$(lxc list --format csv --columns ns | grep "$1")
   echo "${lxc_status}"
@@ -16,4 +16,3 @@ function lxc_start
   clear
   lxc exec "$1" -- sudo --user ubuntu --login
 }
-
