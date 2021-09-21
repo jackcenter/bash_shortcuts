@@ -5,6 +5,9 @@ if [ $BASHRC_ENV == "jack-ThinkPad-T15-Gen-1" ]; then
     export COLOR_0="0;34m"
     export COLOR_1="0;32m"
     export COLOR_2="0;0m"
+
+    # source /opt/ros/noetic/setup.bash
+    source /opt/ros/foxy/setup.bash
 fi
 
 if [ $BASHRC_ENV == "ros2_lxc" ]; then
@@ -12,4 +15,17 @@ if [ $BASHRC_ENV == "ros2_lxc" ]; then
     export COLOR_0="0;33m"
     export COLOR_1="0;32m"
     export COLOR_2="0;0m"
+fi
+
+if [ $BASHRC_ENV == "appliedlogix" ]; then
+    EDITOR='code'
+    export COLOR_0="0;31m"
+    export COLOR_1="0;30m"
+    export COLOR_2="0;0m"
+
+    source /opt/intel/openvino/bin/setupvars.sh
+    source /opt/ros/melodic/setup.bash
+    source ~/ws_appliedlogix/devel/setup.bash
+
+    cd ~/ws_appliedlogix
 fi
