@@ -9,7 +9,7 @@ if [ $BASHRC_ENV == "jack-ThinkPad-T15-Gen-1" ]; then
     # source /opt/ros/noetic/setup.bash
     source /opt/ros/foxy/setup.bash
 
-elif [ $BASHRC_ENV == "ros2_lxc" ]; then
+elif [ $BASHRC_ENV == "ros2-lxc" ]; then
     EDITOR='code'
     export COLOR_0="0;33m"
     export COLOR_1="0;32m"
@@ -27,7 +27,7 @@ elif [ $BASHRC_ENV == "appliedlogix" ]; then
 
     cd ~/ws_appliedlogix
 
-elif [ $BASHRC_ENV == "ros2_foxy" ]; then
+elif [ $BASHRC_ENV == "ros2-foxy" ]; then
     EDITOR='code'
     export COLOR_0="0;33m"
     export COLOR_1="0;32m"
