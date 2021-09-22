@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Replaces ~/.bashrc with the user defined BASHRC_ENV and BASHRC_NAME variables and adds the sourceing 
-# for the bash_shortcuts/.my.bashrc. This should be run after 
+# for the bash_shortcuts/.my.bashrc.
 function setup_bash 
 {
     local ENV_VAL=${1:-none}
