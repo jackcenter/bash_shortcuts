@@ -29,3 +29,13 @@ if [ $BASHRC_ENV == "appliedlogix" ]; then
 
     cd ~/ws_appliedlogix
 fi
+
+if [ $BASHRC_ENV == "ros2_foxy" ]; then
+    EDITOR='code'
+    export COLOR_0="0;33m"
+    export COLOR_1="0;32m"
+    export COLOR_2="0;0m"
+
+    # source /opt/ros/noetic/setup.bash
+    source /opt/ros/foxy/setup.bash
+fi
