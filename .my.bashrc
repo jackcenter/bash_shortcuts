@@ -1,7 +1,5 @@
 #!/bin/bash -eu
 
-clear
-
 source $HOME/bash_shortcuts/scripts/default.sh
 source $HOME/bash_shortcuts/scripts/env.sh
 source $HOME/bash_shortcuts/scripts/git.sh
