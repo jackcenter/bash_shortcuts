@@ -36,6 +36,18 @@ elif [ $BASHRC_ENV == "ros2-foxy" ]; then
     # source /opt/ros/noetic/setup.bash
     source /opt/ros/foxy/setup.bash
 
+elif [ $BASHRC_ENV == "jack-NUC10i5FNK" ]; then
+    EDITOR='code'
+    export COLOR_0="0;34m"
+    export COLOR_1="0;30m"
+    export COLOR_2="0;0m"
+
+elif [ $BASHRC_ENV == "rpi-home" ]; then
+    EDITOR='vim'
+    export COLOR_0="0;31m"
+    export COLOR_1="0;30m"
+    export COLOR_2="0;0m"
+
 elif [ $BASHRC_ENV == "default" ]; then
     EDITOR='code'
     export COLOR_0="0;34m"
