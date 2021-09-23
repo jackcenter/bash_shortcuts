@@ -7,7 +7,7 @@ function setup_bash
     local DEVICE_VAL=${1:-none}
     local ENV_VAL=${2:-none}
     local NAME_VAL=${3:-none}
-    echo "export BASHRC_DEVICE=$DEVICE_VAL export BASHRC_ENV=$ENV_VAL && export BASHRC_NAME=$NAME_VAL" > ~/.bashrc
+    echo "export BASHRC_DEVICE=$DEVICE_VAL && export BASHRC_ENV=$ENV_VAL && export BASHRC_NAME=$NAME_VAL" > ~/.bashrc
     echo ". ~/bash_shortcuts/.my.bashrc" >> ~/.bashrc 
     source ~/.bashrc
 }
