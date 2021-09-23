@@ -12,4 +12,4 @@ function setup_bash
     source ~/.bashrc
 }
 
-setup_bash $1 $2
+setup_bash $1 $2 $3
