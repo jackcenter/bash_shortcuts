@@ -15,8 +15,8 @@ elif [ $BASHRC_DEVICE == "default" ]; then
     EDITOR='code'
 
 else
-    echo "\e[33mWarning: BASHRC_DEVICE variable defined in '~/.bashrc' not found in 'bash_shortcuts/scripts/env.sh'"
-    echo "\e[33mConsider setting the BASHRC_ENV variable to your desired settings."
+    echo -e "\e[33mWarning: BASHRC_DEVICE variable defined in '~/.bashrc' not found in 'bash_shortcuts/scripts/env.sh'"
+    echo -e "\e[33mConsider setting the BASHRC_ENV variable to your desired settings."
     echo ""
 
     export EDITOR='code'
