@@ -31,3 +31,20 @@ lxc restore <container> <snapshot-name>
 ```
 lxc delete <container>/<snapshot>
 ```
+
+### Rename
+```
+lxc stop <old-lxc-name>
+lxc move <old-lxc-name> <new-lxc-name>
+lxc_open <new-lxc-name>
+```
+Inside the container update the hostname:
+```
+echo '<new-lxc-name>' > /etc/hostname
+sed -i 's/<old-lxc-name>/<new-lxc-name>/g' /etc/hosts
+exit
+```
+Restart the container
+```
+lxc restart <new-lxc-name>
+```
