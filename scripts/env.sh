@@ -42,7 +42,7 @@ elif [ $BASHRC_ENV == "ros2-galactic" ]; then
     export COLOR_1="0;32m"
     export COLOR_2="0;0m"
 
-    source /opt/ros/foxy/setup.bash
+    source /opt/ros/galactic/setup.bash
 
 elif [ $BASHRC_ENV == "rpi" ]; then
     EDITOR='vim'
