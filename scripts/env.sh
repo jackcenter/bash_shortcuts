@@ -6,14 +6,15 @@ if [ $BASHRC_ENV == "jack-ThinkPad-T15-Gen-1" ]; then
     export COLOR_1="0;32m"
     export COLOR_2="0;0m"
 
-    # source /opt/ros/noetic/setup.bash
     source /opt/ros/foxy/setup.bash
 
-elif [ $BASHRC_ENV == "ros2-lxc" ]; then
+elif [ $BASHRC_ENV == "jack-NUC10i5FNK" ]; then
     EDITOR='code'
-    export COLOR_0="0;33m"
-    export COLOR_1="0;32m"
+    export COLOR_0="0;34m"
+    export COLOR_1="0;30m"
     export COLOR_2="0;0m"
+
+    source /opt/ros/foxy/setup.bash
 
 elif [ $BASHRC_ENV == "appliedlogix" ]; then
     EDITOR='code'
@@ -33,18 +34,17 @@ elif [ $BASHRC_ENV == "ros2-foxy" ]; then
     export COLOR_1="0;32m"
     export COLOR_2="0;0m"
 
-    # source /opt/ros/noetic/setup.bash
     source /opt/ros/foxy/setup.bash
 
-elif [ $BASHRC_ENV == "jack-NUC10i5FNK" ]; then
+elif [ $BASHRC_ENV == "ros2-galactic" ]; then
     EDITOR='code'
-    export COLOR_0="0;34m"
-    export COLOR_1="0;30m"
+    export COLOR_0="0;33m"
+    export COLOR_1="0;32m"
     export COLOR_2="0;0m"
 
     source /opt/ros/foxy/setup.bash
 
-elif [ $BASHRC_ENV == "rpi-home" ]; then
+elif [ $BASHRC_ENV == "rpi" ]; then
     EDITOR='vim'
     export COLOR_0="0;31m"
     export COLOR_1="0;30m"
