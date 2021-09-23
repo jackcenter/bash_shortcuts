@@ -42,6 +42,8 @@ elif [ $BASHRC_ENV == "jack-NUC10i5FNK" ]; then
     export COLOR_1="0;30m"
     export COLOR_2="0;0m"
 
+    source /opt/ros/foxy/setup.bash
+
 elif [ $BASHRC_ENV == "rpi-home" ]; then
     EDITOR='vim'
     export COLOR_0="0;31m"
