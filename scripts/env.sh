@@ -22,7 +22,14 @@ else
     export EDITOR='code'
 fi
 
-if [ $BASHRC_ENV == "ros-noetic" ]; then
+if [ $BASHRC_ENV == "ros-melodic" ]; then
+    export COLOR_0="0;35m"
+    export COLOR_1="0;90m"
+    export COLOR_2="0;0m"
+
+    source /opt/ros/melodic/setup.bash
+
+elif [ $BASHRC_ENV == "ros-noetic" ]; then
     export COLOR_0="0;32m"
     export COLOR_1="0;90m"
     export COLOR_2="0;0m"
