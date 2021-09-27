@@ -61,6 +61,11 @@ elif [ $BASHRC_ENV == "appliedlogix" ]; then
 
     cd ~/ws_appliedlogix
 
+elif [ $BASHRC_ENV == "website-picknik" ]; then
+    export COLOR_0="38;5;42m"
+    export COLOR_1="0;90m"
+    export COLOR_2="0;0m"
+
 elif [ $BASHRC_ENV == "default" ]; then
     export COLOR_0="0;34m"
     export COLOR_1="0;90m"
