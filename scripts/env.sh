@@ -11,6 +11,9 @@ elif [ $BASHRC_DEVICE == "NUC10i5FNK" ]; then
 elif [ $BASHRC_DEVICE == "rpi" ]; then
     EDITOR='vim'
 
+elif [ $BASHRC_DEVICE == "mosasaurus" ]; then
+    EDITOR='code'
+
 elif [ $BASHRC_DEVICE == "default" ]; then
     EDITOR='code'
 
@@ -49,6 +52,13 @@ elif [ $BASHRC_ENV == "ros2-galactic" ]; then
     export COLOR_2="0;0m"
 
     source /opt/ros/galactic/setup.bash
+
+elif [ $BASHRC_ENV == "ros2-rolling" ]; then
+    export COLOR_0="38;5;78m"
+    export COLOR_1="0;90m"
+    export COLOR_2="0;0m"
+
+    source /opt/ros/rolling/setup.bash
 
 elif [ $BASHRC_ENV == "appliedlogix" ]; then
     export COLOR_0="0;31m"
