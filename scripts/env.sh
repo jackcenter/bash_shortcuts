@@ -8,6 +8,8 @@ if [ $BASHRC_DEVICE == "ThinkPad-T15-Gen-1" ]; then
 elif [ $BASHRC_DEVICE == "NUC10i5FNK" ]; then
     EDITOR='code'
 
+    alias ssh_rpi='ssh ubuntu@10.0.0.88'
+
 elif [ $BASHRC_DEVICE == "rpi" ]; then
     EDITOR='vim'
 
@@ -28,6 +30,7 @@ if [ $BASHRC_ENV == "ros-melodic" ]; then
     export COLOR_2="0;0m"
 
     source /opt/ros/melodic/setup.bash
+    source $HOME/bash_shortcuts/scripts/ros.sh
 
 elif [ $BASHRC_ENV == "ros-noetic" ]; then
     export COLOR_0="0;32m"
@@ -35,6 +38,7 @@ elif [ $BASHRC_ENV == "ros-noetic" ]; then
     export COLOR_2="0;0m"
 
     source /opt/ros/noetic/setup.bash
+    source $HOME/bash_shortcuts/scripts/ros.sh
 
 elif [ $BASHRC_ENV == "ros2-foxy" ]; then
     export COLOR_0="38;5;202m"
@@ -42,6 +46,7 @@ elif [ $BASHRC_ENV == "ros2-foxy" ]; then
     export COLOR_2="0;0m"
 
     source /opt/ros/foxy/setup.bash
+    source $HOME/bash_shortcuts/scripts/ros.sh
 
 elif [ $BASHRC_ENV == "ros2-galactic" ]; then
     export COLOR_0="0;34m"
@@ -49,6 +54,7 @@ elif [ $BASHRC_ENV == "ros2-galactic" ]; then
     export COLOR_2="0;0m"
 
     source /opt/ros/galactic/setup.bash
+    source $HOME/bash_shortcuts/scripts/ros.sh
 
 elif [ $BASHRC_ENV == "appliedlogix" ]; then
     export COLOR_0="0;31m"
@@ -58,6 +64,7 @@ elif [ $BASHRC_ENV == "appliedlogix" ]; then
     source /opt/intel/openvino/bin/setupvars.sh
     source /opt/ros/melodic/setup.bash
     source ~/ws_appliedlogix/devel/setup.bash
+    source $HOME/bash_shortcuts/scripts/ros.sh
 
     cd ~/ws_appliedlogix
 
