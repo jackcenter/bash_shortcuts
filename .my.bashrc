@@ -1,11 +1,9 @@
 #!/bin/bash -eu
 
 source $HOME/bash_shortcuts/scripts/default.sh
+source $HOME/bash_shortcuts/scripts/ssh.sh
 source $HOME/bash_shortcuts/scripts/env.sh
 source $HOME/bash_shortcuts/scripts/git.sh
 source $HOME/bash_shortcuts/scripts/lxc.sh
-
-# TODO: this should only be run in ROS environments
-source $HOME/bash_shortcuts/scripts/ros.sh
 
 echo ""
