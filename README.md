@@ -1,4 +1,12 @@
 # Useful Commands
+## ssh
+### Generate a new key
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+eval "$(ssh-agent -s)"      # start the ssh-agent in the background
+ssh-add ~/,ssh/id_ed25519   # add the private key to the ssh-agent
+```
+
 ## LXC
 
 ### Create fresh container
