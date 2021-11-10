@@ -56,3 +56,9 @@ Restart the container
 ```
 lxc restart <new-lxc-name>
 ```
+
+# Software to install in new Ubuntu environments (TODO)
+- ros distro
+- google-chrome
+- wstool
+- terminator
