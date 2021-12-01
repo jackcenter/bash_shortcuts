@@ -18,13 +18,13 @@ elif [ $BASHRC_DEVICE == "mosasaurus" ]; then
 
 elif [ $BASHRC_DEVICE == "stretch" ]; then
     EDITOR='vim'
-    
+
 elif [ $BASHRC_DEVICE == "default" ]; then
     EDITOR='code'
 
 else
-    echo "\e[0;33m Warning: BASHRC_DEVICE variable defined in '~/.bashrc' not found in 'bash_shortcuts/scripts/env.sh'"
-    echo "\e[0;33m Consider setting the BASHRC_ENV variable to your desired settings."
+    echo "${\e[0;33m} Warning: BASHRC_DEVICE variable defined in '~/.bashrc' not found in 'bash_shortcuts/scripts/env.sh'"
+    echo "${\e[0;33m} Consider setting the BASHRC_ENV variable to your desired settings."
     echo ""
 
     export EDITOR='code'
