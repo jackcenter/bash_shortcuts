@@ -1,7 +1,7 @@
 # Useful Commands
 ## ssh
 ### Generate a new key
-```
+```xml
 ssh-keygen -t ed25519 -C "your_email@example.com"
 eval "$(ssh-agent -s)"      # start the ssh-agent in the background
 ssh-add ~/.ssh/id_ed25519   # add the private key to the ssh-agent
@@ -10,61 +10,60 @@ ssh-add ~/.ssh/id_ed25519   # add the private key to the ssh-agent
 ## LXC
 
 ### Create fresh container
-```
+```xml
 lxc launch --profile default --profile gui ubuntu:XX.XX <container_name> \
 lxc file push ~/.ssh/id_ed25519.pub <container_name>/home/ubuntu/.ssh/authorized_keys
 ```
 
 ### Push file to container
-```
+```xml
 lxc file push myfile.txt mycontainer/home/ubuntu/
 ```
 
 ### Setup remote
-```
+```xml
 ssh-keygen -t ed25519 -C "<comment>" #copy to repo
 ```
 
 ### Snapshot
-```
+```xml
 lxc snapshot <container> <snapshot-name>
 ```
 
 ### Restore
-```
+```xml
 lxc restore <container> <snapshot-name>
 ```
 
 ### Delete
-```
+```xml
 lxc delete <container>/<snapshot>
 ```
 
 ### Rename
-```
+```xml
 lxc stop <old-lxc-name>
 lxc move <old-lxc-name> <new-lxc-name>
 lxc_open <new-lxc-name>
 ```
 Inside the container update the hostname:
-```
+```xml
 echo '<new-lxc-name>' > /etc/hostname
 sed -i 's/<old-lxc-name>/<new-lxc-name>/g' /etc/hosts
 exit
 ```
 Restart the container
-```
+```xml
 lxc restart <new-lxc-name>
 ```
 ## Ubuntu
 
-### Setup new user
-Generally used after creating a new container of ssh-ing into a computer for the first time.
----
+### Setup a new user
+```xml
 sudo adduser <user-name>
 sudo usermod -aG sudo <user-name>
 su <user-name>
----
+```
   
 # Software to install in new Ubuntu environments (TODO)
 - ros distro
