@@ -56,7 +56,16 @@ Restart the container
 ```
 lxc restart <new-lxc-name>
 ```
+## Ubuntu
 
+### Setup new user
+Generally used after creating a new container of ssh-ing into a computer for the first time.
+---
+sudo adduser <user-name>
+sudo usermod -aG sudo <user-name>
+su <user-name>
+---
+  
 # Software to install in new Ubuntu environments (TODO)
 - ros distro
 - google-chrome
