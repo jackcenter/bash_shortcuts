@@ -9,6 +9,17 @@ ssh-add ~/.ssh/id_ed25519   # add the private key to the ssh-agent
 
 ## LXC
 
+### Install
+```
+sudo apt-get install lxc
+sudo apt-get install lxd
+lxd init
+```
+### Create GUI profile
+```xml
+lxc profile create gui
+cat lxdguiprofile.txt | lxc profile edit gui
+```
 ### Create fresh container
 ```xml
 lxc launch --profile default --profile gui ubuntu:XX.XX <container_name> \
