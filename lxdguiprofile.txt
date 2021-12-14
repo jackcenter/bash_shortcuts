@@ -2,7 +2,7 @@ config:
   environment.DISPLAY: :0
   environment.PULSE_SERVER: unix:/home/ubuntu/pulse-native
   nvidia.driver.capabilities: all
-  nvidia.runtime: "true"
+  nvidia.runtime: "false"
   user.user-data: |
     #cloud-config
     runcmd:
