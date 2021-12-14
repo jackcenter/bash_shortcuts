@@ -1,27 +1,36 @@
 config:
   environment.DISPLAY: :0
-  raw.idmap: both 1000 1000
+  environment.PULSE_SERVER: unix:/home/ubuntu/pulse-native
+  nvidia.driver.capabilities: all
+  nvidia.runtime: "true"
   user.user-data: |
     #cloud-config
     runcmd:
       - 'sed -i "s/; enable-shm = yes/enable-shm = no/g" /etc/pulse/client.conf'
-      - 'echo export PULSE_SERVER=unix:/tmp/.pulse-native | tee --append /home/ubuntu/.profile'
     packages:
       - x11-apps
       - mesa-utils
       - pulseaudio
 description: GUI LXD profile
 devices:
-  PASocket:
-    path: /tmp/.pulse-native
-    source: /run/user/1000/pulse/native
-    type: disk
+  PASocket1:
+    bind: container
+    connect: unix:/run/user/1000/pulse/native
+    listen: unix:/home/ubuntu/pulse-native
+    security.gid: "1000"
+    security.uid: "1000"
+    uid: "1000"
+    gid: "1000"
+    mode: "0777"
+    type: proxy
   X0:
-    path: /tmp/.X11-unix/X0
-    source: /tmp/.X11-unix/X0
-    type: disk
+    bind: container
+    connect: unix:@/tmp/.X11-unix/X0
+    listen: unix:@/tmp/.X11-unix/X0
+    security.gid: "1000"
+    security.uid: "1000"
+    type: proxy
   mygpu:
     type: gpu
-name: gui
-used_by:
-
+name: x11
+used_by: []
