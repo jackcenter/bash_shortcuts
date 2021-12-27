@@ -75,6 +75,22 @@ sudo adduser <user-name>
 sudo usermod -aG sudo <user-name>
 su <user-name>
 ```
+
+### Activate SPI
+create `KERNEL=="spidev0.1", OWNER="root", GROUP="spi"` with:
+```bash
+KERNEL=="spidev0.0", OWNER="root", GROUP="spi"
+KERNEL=="spidev0.1", OWNER="root", GROUP="spi"
+```
+Create the group and assign users to it:
+```bash
+sudo groupadd -f --system spi
+sudo usermod -a -G spi ubuntu
+```
+Restart
+```bash
+sudo shutdown -r now
+```
   
 # Software to install in new Ubuntu environments (TODO)
 - ros distro
