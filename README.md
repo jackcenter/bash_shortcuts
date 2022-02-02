@@ -86,7 +86,7 @@ For a camera:
 ```
 lxc config device add <lxc-name> video0 unix-char path=/dev/video0 gid=1000
 ```
-Where video0 mauy change depending on what you're using (note: I can't get this to work with cheese, but the camera is mounted?).
+Where video0 may change depending on what you're using (note: I can't get this to work with cheese, but the camera is mounted?).
 
 ## Ubuntu
 
