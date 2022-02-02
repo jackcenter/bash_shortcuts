@@ -67,6 +67,27 @@ Restart the container
 ```xml
 lxc restart <new-lxc-name>
 ```
+
+### Mount USB Device
+Figure out what the device's vendor and product ID are:
+```xml
+$ lsusb
+Bus 004 Device 001: ID ----:---- Linux Foundation 3.0 root hub
+Bus 003 Device 001: ID ----:---- Linux Foundation 2.0 root hub
+Bus 002 Device 010: ID vvvv:pppp Intel Corp. Intel(R) RealSense(TM) Depth Camera 415 
+```
+XXXX:XXXX is vendor:product. For example, the RealSense vendor ID is <aaaa> and the product ID is <pppp>.
+
+Next, add the device configuration to the lxc:
+```xml
+lxc config device add <lxc-name> <pick-a-name> usb vendorid=vvvv productid=pppp gid=1000
+```
+For a camera:
+```
+lxc config device add <lxc-name> video0 unix-char path=/dev/video0 gid=1000
+```
+Where video0 mauy change depending on what you're using (note: I can't get this to work with cheese, but the camera is mounted?).
+
 ## Ubuntu
 
 ### Setup a new user
