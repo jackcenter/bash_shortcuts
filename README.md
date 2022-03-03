@@ -15,6 +15,15 @@ sudo apt-get install lxc
 sudo apt-get install lxd
 lxd init
 ```
+### Storage pools
+Create one:
+```bash
+lxc storage create <name> zfs size=XXGiB
+```
+Make a container in one:
+```bash
+lxc launch --profile default --profile gui ubuntu:XX.XX <container_name> -s <pool_name>
+```
 ### Create GUI profile
 ```xml
 lxc profile create gui
