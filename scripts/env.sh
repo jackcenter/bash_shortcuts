@@ -74,10 +74,13 @@ elif [ $BASHRC_ENV == "appliedlogix" ]; then
     export COLOR_1="0;90m"
     export COLOR_2="0;0m"
 
-    source /opt/intel/openvino/bin/setupvars.sh
-    source /opt/ros/melodic/setup.bash
-    source ~/ws_appliedlogix/devel/setup.bash
+    source /opt/intel/openvino_2021/bin/setupvars.sh
+    export CPLUS_INCLUDE_PATH=/opt/intel/openvino_2021/deployment_tools/inference_engine/samples/cpp/common/utils/include:/opt/intel/openvino_2021/deployment_tools/ngraph/include
+    source /opt/ros/noetic/setup.bash
+    export PATH="/usr/lib/ccache/bin/:$PATH"
+
     source $HOME/bash_shortcuts/scripts/ros.sh
+    source ~/ws_appliedlogix/devel/setup.bash
 
     cd ~/ws_appliedlogix
 
