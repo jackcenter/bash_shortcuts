@@ -121,7 +121,15 @@ Restart
 ```bash
 sudo shutdown -r now
 ```
-  
+
+## Install ccache
+```bash   
+sudo apt-get update
+sudo apt-get install ccache
+export PATH="/usr/lib/ccache/bin/:$PATH"
+```
+Need to add export to .bashrc if you don't want to do it every time.
+
 # Software to install in new Ubuntu environments (TODO)
 - ros distro
 - google-chrome
