@@ -1,3 +1,36 @@
+# Create a new workspace
+```
+# TODO: make this a command
+lxc launch --profile default --profile gui ubuntu:XX.XX <container_name> \
+lxc file push ~/.ssh/id_ed25519.pub <container_name>/home/ubuntu/.ssh/authorized_keys
+lxc file push ~/.ssh/id_ed25519.pub <container_name>/home/ubuntu/.ssh/id_ed25519.pub
+lxc file push ~/.ssh/id_ed25519 <container_name>/home/ubuntu/.ssh/id_ed25519.pub
+
+lxc_open <container_name>
+```
+-clone bash_shortcuts
+```
+./bash_shortcuts/install.sh <device_name> <environment_name> <user_name>
+
+# TODO: make this part of the install
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+- install terminator `sudo apt install terminator`
+- install ros version 
+- install rosdep
+```
+sudo apt install python3-rosdep2
+rosdep init
+rosdep update
+# For a package
+rosdep install -i --from-path src --rosdistro foxy -y
+```
+sudo apt install python3-colcon-common-extensions
+```
+
+
+
 # Useful Commands
 ## ssh
 ### Generate a new key
