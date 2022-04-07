@@ -67,7 +67,8 @@ elif [ $BASHRC_ENV == "ros2-rolling" ]; then
     export COLOR_1="0;90m"
     export COLOR_2="0;0m"
 
-    source ~/ros2_rolling/install/local_setup.bash
+    export ROSDISTRO_INDEX_URL=https://raw.githubusercontent.com/ros/rosdistro/rolling/2022-01-28/index-v4.yaml
+    source /opt/ros/rolling/setup.bash
 
 elif [ $BASHRC_ENV == "appliedlogix" ]; then
     export COLOR_0="0;31m"
