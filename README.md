@@ -4,7 +4,7 @@
 lxc launch --profile default --profile gui ubuntu:XX.XX <container_name> \
 lxc file push ~/.ssh/id_ed25519.pub <container_name>/home/ubuntu/.ssh/authorized_keys
 lxc file push ~/.ssh/id_ed25519.pub <container_name>/home/ubuntu/.ssh/id_ed25519.pub
-lxc file push ~/.ssh/id_ed25519 <container_name>/home/ubuntu/.ssh/id_ed25519.pub
+lxc file push ~/.ssh/id_ed25519 <container_name>/home/ubuntu/.ssh/id_ed25519
 
 lxc_open <container_name>
 ```
