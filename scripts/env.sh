@@ -2,7 +2,7 @@
 
 
 # TODO: make warning a environment variable and add actual color names.
-if [ $BASHRC_DEVICE == "ThinkPad-T15-Gen-1" ]; then
+if [ $BASHRC_DEVICE == "ThinkPad" ]; then
     EDITOR='code'
 
 elif [ $BASHRC_DEVICE == "NUC10i5FNK" ]; then
@@ -11,12 +11,6 @@ elif [ $BASHRC_DEVICE == "NUC10i5FNK" ]; then
     alias ssh_rpi='ssh ubuntu@10.0.0.88'
 
 elif [ $BASHRC_DEVICE == "rpi" ]; then
-    EDITOR='vim'
-
-elif [ $BASHRC_DEVICE == "mosasaurus" ]; then
-    EDITOR='code'
-
-elif [ $BASHRC_DEVICE == "stretch" ]; then
     EDITOR='vim'
 
 elif [ $BASHRC_DEVICE == "default" ]; then
