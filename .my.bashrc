@@ -7,4 +7,3 @@ source $HOME/bash_shortcuts/scripts/lxc.sh
 source $HOME/bash_shortcuts/scripts/ssh.sh
 source $HOME/bash_shortcuts/scripts/vcstool.sh
 
-echo ""
