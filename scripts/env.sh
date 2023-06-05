@@ -13,6 +13,9 @@ elif [ $BASHRC_DEVICE == "NUC10i5FNK" ]; then
 elif [ $BASHRC_DEVICE == "rpi" ]; then
     EDITOR='vim'
 
+elif [ $BASHRC_DEVICE == "or-lin-mpc2" ]; then
+    EDITOR='code'
+    
 elif [ $BASHRC_DEVICE == "default" ]; then
     EDITOR='code'
 
@@ -64,23 +67,8 @@ elif [ $BASHRC_ENV == "ros2-rolling" ]; then
     export ROSDISTRO_INDEX_URL=https://raw.githubusercontent.com/ros/rosdistro/rolling/2022-01-28/index-v4.yaml
     source /opt/ros/rolling/setup.bash
 
-elif [ $BASHRC_ENV == "appliedlogix" ]; then
-    export COLOR_0="0;31m"
-    export COLOR_1="0;90m"
-    export COLOR_2="0;0m"
-
-    source /opt/intel/openvino_2021/bin/setupvars.sh
-    export CPLUS_INCLUDE_PATH=/opt/intel/openvino_2021/deployment_tools/inference_engine/samples/cpp/common/utils/include:/opt/intel/openvino_2021/deployment_tools/ngraph/include
-    source /opt/ros/noetic/setup.bash
-    export PATH="/usr/lib/ccache/bin/:$PATH"
-
-    source $HOME/bash_shortcuts/scripts/ros.sh
-    source ~/ws_appliedlogix/devel/setup.bash
-
-    cd ~/ws_appliedlogix
-
-elif [ $BASHRC_ENV == "website-picknik" ]; then
-    export COLOR_0="38;5;42m"
+elif [ $BASHRC_ENV == "outrider" ]; then
+    export COLOR_0="0;33m"
     export COLOR_1="0;90m"
     export COLOR_2="0;0m"
 
