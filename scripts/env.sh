@@ -8,13 +8,15 @@ if [ $BASHRC_DEVICE == "ThinkPad" ]; then
 elif [ $BASHRC_DEVICE == "NUC10i5FNK" ]; then
     EDITOR='code'
 
-    alias ssh_rpi='ssh ubuntu@10.0.0.88'
+    alias ssh_rpi='ssh ubuntu@10.0.0.87'
 
 elif [ $BASHRC_DEVICE == "rpi" ]; then
     EDITOR='vim'
 
 elif [ $BASHRC_DEVICE == "jackssurface8" ]; then
     EDITOR='code'
+
+    alias ssh_rpi='ssh ubuntu@10.0.0.87'
     
 elif [ $BASHRC_DEVICE == "default" ]; then
     EDITOR='code'
