@@ -13,7 +13,7 @@ elif [ $BASHRC_DEVICE == "NUC10i5FNK" ]; then
 elif [ $BASHRC_DEVICE == "rpi" ]; then
     EDITOR='vim'
 
-elif [ $BASHRC_DEVICE == "or-lin-mpc2" ]; then
+elif [ $BASHRC_DEVICE == "jackssurface8" ]; then
     EDITOR='code'
     
 elif [ $BASHRC_DEVICE == "default" ]; then
