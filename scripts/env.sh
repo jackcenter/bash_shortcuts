@@ -61,6 +61,15 @@ elif [ $BASHRC_ENV == "ros2-galactic" ]; then
     source /opt/ros/galactic/setup.bash
     source $HOME/bash_shortcuts/scripts/ros.sh
 
+elif [ $BASHRC_ENV == "ros2-jazzy" ]; then
+    export COLOR_0="0;34m"
+    export COLOR_1="0;90m"
+    export COLOR_2="0;0m"
+
+    source /opt/ros/jazzy/setup.bash
+    source $HOME/bash_shortcuts/scripts/ros.sh
+
+
 elif [ $BASHRC_ENV == "ros2-rolling" ]; then
     export COLOR_0="38;5;78m"
     export COLOR_1="0;90m"
